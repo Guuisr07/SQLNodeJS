@@ -1,0 +1,10 @@
+//Importar o path para mostrar o caminho aonde esta o arquivo de configuracoes
+const path = require('path');
+
+module.exports = {
+  config: path.resolve(__dirname, 'src', 'config', 'database.js'),
+  //Para mostrar aonde sera que criada as migrations
+  //Para criar uma migration que serve para criar tabelas deve rodar o comando yarn
+  //sequelize migration:create --name=create-users
+  'migrations-path': path.resolve(__dirname, 'src', 'database', 'migrations'),
+};
